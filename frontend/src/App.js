@@ -8,6 +8,8 @@ import Products from './pages/products';
 import ProductPage from './pages/productPage';
 import { CartProvider } from './components/cartContext';
 import VirtualTryOn from './pages/virtual_try_on';
+import ChatWindow from './pages/chatWindow';
+import Account from './pages/account';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="products" element={<Products />} />
             <Route path="products/:pk" element={<ProductPage />} />
             <Route path="products/virtual-try-on/:pk" element={<VirtualTryOn />} />
+            <Route path="chat" element={<ChatWindow />} />
+            <Route path="account" element={<Account />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

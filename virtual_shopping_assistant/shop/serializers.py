@@ -6,14 +6,15 @@ from rest_framework_simplejwt.tokens import RefreshToken
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=('id','username','email','password')
+        fields='__all__'
         extra_kwargs = {'password':{'write_only':True}}
 
     def create(self,validated_data):
         user = User.objects.create_user(
             username=validated_data.get('username'),
             email=validated_data.get('email'),
-            password=validated_data.get('password')
+            password=validated_data.get('password'),
+            
         )
         return user
 
@@ -106,3 +107,9 @@ class UpdateUserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
         fields = ('id','username','email')
+
+
+class ChatHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatHistory
+        fields = ['id', 'user', 'message', 'response', 'recommendations','timestamp']
