@@ -1,4 +1,4 @@
-# Virtual Shopping Assistant and Virtual Try-On Features
+# VogueNest
 
 This project is a Virtual Shopping Assistant application built to enhance the shopping experience on an eCommerce platform. It incorporates a variety of features to provide users with an interactive, engaging, and seamless shopping experience.
 
